@@ -14,6 +14,6 @@ This line is an example of using paragraph and bibtex. Reference example [1].
 
 ## Advanced
 
-Font The fonts I used for my applications are slightly different. I changed them because one of them is a commercial font, and because I want to preserve a bit of uniqueness :-). I chose different fonts but I also these fonts are decent. You can change them by loading different ttf files in the format.tex file. I suggest to use a font which matches your CV. So if you use a serif font in your CV, you should at least use a serif font here. I chose to use the identical fonts. This is because your materials will be reviewed together.
+**Font** The fonts I used for my applications are slightly different. I changed them because one of them is a commercial font, and because I want to preserve a bit of uniqueness :-). I chose different fonts but I also these fonts are decent. You can change them by loading different ttf files in the format.tex file. I suggest to use a font which matches your CV. So if you use a serif font in your CV, you should at least use a serif font here. I chose to use the identical fonts. This is because your materials will be reviewed together.
 
-Spacing and Size You can change line space (\linespread, about line 185), section title size, page margin, paragraph spacing (\parskip) etc in the format.tex file. You can change font size in the main file.
+**Spacing and Size** You can change line space (\linespread, about line 185), section title size, page margin, paragraph spacing (\parskip) etc in the format.tex file. You can change font size in the main file.
