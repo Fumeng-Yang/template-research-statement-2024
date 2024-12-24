@@ -1,24 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{researchstatement}[2024/12/03]
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\ProcessOptions
+\LoadClass{article}
+
 %--------------------------------------------------------------------------------
 % Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx,xcolor}
-\usepackage{fontspec}
-\usepackage[T1]{fontenc}
-\usepackage{fancyhdr}
-\usepackage{comment}
-\usepackage{float}
-\usepackage[hidelinks]{hyperref}
-\usepackage{xspace}
-\usepackage{xurl}
-\usepackage{natbib} % the text after reference
-\usepackage{microtype}
- \usepackage[strict]{changepage}
- 
+\RequirePackage{amsmath}
+\RequirePackage{graphicx,xcolor}
+\RequirePackage{fontspec}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{fancyhdr}
+\RequirePackage{comment}
+\RequirePackage{float}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{xspace}
+\RequirePackage{xurl}
+\RequirePackage{natbib} % the text after reference
+\RequirePackage{microtype}
+ \RequirePackage[strict]{changepage}
+ \RequirePackage{setspace}
 \setlength{\bibsep}{.5em plus .5em}
 \renewcommand{\UrlFont}{\mainfont\fontsize{8.5pt}{8.5pt}\selectfont}
 
 % page setup
-\usepackage[letterpaper,top=1.75cm,bottom=1.75cm,left=1.75cm,right=1.75cm, footskip=.75cm]{geometry}
+\RequirePackage[letterpaper,top=1.75cm,bottom=1.75cm,left=1.75cm,right=1.75cm, footskip=.75cm]{geometry}
 % package ends
 %--------------------------------------------------------------------------------
 
@@ -55,6 +61,9 @@
 \DeclareTextFontCommand{\textmd}{\mdseries}
 \DeclareTextFontCommand{\textmi}{\smseries\itshape}
 \DeclareTextFontCommand{\textli}{\ltseries\itshape}
+\RequirePackage{caption} 
+\DeclareCaptionFont{quack}{\mainfont}
+\captionsetup{font=quack, labelfont=bf}
 
 \newfontfamily\namefont[
   Path=\@fontdir,
@@ -110,7 +119,7 @@
 
 
 % section
-\usepackage{titlesec} % Used to customize the \section command
+\RequirePackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\hfont\bfseries\fontsize{11.5pt}{11.5pt}\selectfont\raggedright}{}{0em}{} % Text formatting of sections
 \titlespacing{\section}{1pt}{1pt}{1pt} % Spacing around sections
 
@@ -156,8 +165,8 @@
 }
 
 
-\usepackage{everypage}
-\usepackage{tikz}
+\RequirePackage{everypage}
+\RequirePackage{tikz}
 \AddEverypageHook{  
 \begin{tikzpicture}[remember picture,overlay]
 \fill[hookcolor,xshift=-30mm,yshift=-248.75mm](0,0) rectangle(7mm,5mm);
@@ -169,8 +178,8 @@
 
 %--------------------------------------------------------------------------------
 % last page
-\usepackage{lastpage}
-% \usepackage{zref-lastpage}
+\RequirePackage{lastpage}
+% \RequirePackage{zref-lastpage}
 % last page ends
 %--------------------------------------------------------------------------------
 
@@ -230,7 +239,7 @@
 
 
 % formatting
-% \usepackage[defaultlines=4,all]{nowidow}\setnoclub
+% \RequirePackage[defaultlines=4,all]{nowidow}\setnoclub
 
 \clubpenalties=2 10000 0
 \widowpenalties=2 10000 0

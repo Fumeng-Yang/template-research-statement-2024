@@ -20,9 +20,11 @@ The main file is \verb|template-RS.tex|, and most of the formatting stuff are in
 \subsection{Basics}
 You need to use XeLaTeX to compile this document. On overleaf, menu $\rightarrow$ compiler. \\
 You should change the name (First Last) in the \verb|template-RS.tex| file. \\
-The colors are specified in the \verb|format.tex| file, around line 69. The convention is to match your home school color. \\
+The colors are specified in the \verb|researchstatement.cls| file, around line 92. The convention is to match your home school color. \\
 The figure on the right is specified using  \verb|minipage|. The pain is that you have to end the text at the same position as the figure. If the text is too long, the text column will run over and the whole page will be pushed to the next page. So you have to end the text at the right point, or put the extra part into the next page manually. Sometimes \verb|\vspace| gives you a bit of extra room. Sorry, I don't know how to make this more flexible. You may need to use lots of \verb|\vspace|. P.S. using \verb|wrapfigure| will be more painful. \\
 This line is an example of using paragraph and bibtex. Reference example \cite{examplepaper}.
+
+\textbf{2024/12/23 update}: This template is unexpectedly getting a bit of attention. I made the \verb|format.tex| into a \verb|.cls| file and also fixed the figure caption font problems. 
 
 \subsection{Advanced}
 \paragraph{Font} The fonts I used for my applications are slightly different.  I changed them because one of them is a commercial font, and because I want to preserve a bit of uniqueness :-). I chose different fonts but I also these fonts are decent. You can change them by loading different ttf files in the \verb|format.tex| file.
@@ -35,12 +37,17 @@ You can change font size in the main file.
 
 \lipsum[1]
 
-\lipsum[13]
+%\lipsum[5]
+Note: Here it has to be a short paragraph ending on this page unless you don't want the side image. Here it has to be a short paragraph ending on this page unless you don't want the side image. 
 
 \end{minipage}
 \hspace{13pt}\begin{minipage}[t]{140pt}
 \begin{figure}[H]
+\vspace{10pt}
 \includegraphics[width=140pt]{pic/p1.pdf}
+\setstretch{1}
+\vspace{-10pt}
+\caption{Don't recommend caption but you can use one}
 \end{figure}
 \end{minipage}
 \end{minipage}
