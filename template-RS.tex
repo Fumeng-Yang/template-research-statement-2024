@@ -1,43 +1,50 @@
 \documentclass{researchstatement}
 
-
-
+%--------------------------------------------------------------------------------
+% Custom Commands
+%--------------------------------------------------------------------------------
 \def\changemargin{\list{}{\rightmargin0in\leftmargin0in}\item[]}
-\let\endchangemargin=\endlist 
+\let\endchangemargin=\endlist
 
+%--------------------------------------------------------------------------------
+% Additional Packages
+%--------------------------------------------------------------------------------
 \usepackage{lipsum}
 
+%--------------------------------------------------------------------------------
+% Document
+%--------------------------------------------------------------------------------
 \begin{document}
 
+% Typography Settings
 \microtypesetup{expansion=false}
 \setlength{\parfillskip}{0pt plus 1fil}
 \def\nespace{\hskip\fontdimen2\font minus\fontdimen4\font\relax}
 \frenchspacing
 
-
-% **** change these **** 
 \newcommand{\mynameinpaper}{{\namefont{First Last}}}
+
+%--------------------------------------------------------------------------------
+% Header and Footer Configuration
+%--------------------------------------------------------------------------------
 \makeheader{First Last}{Research}{Statement}
 \makefooter{First Last}{Research Statement}{\thepage\separator\pageref{LastPage}}
-% **** **** **** **** **** 
 
-% font size for the main body
-\mainfont\fontsize{9pt}{9pt}\selectfont
-
+%--------------------------------------------------------------------------------
+% Main Body
+%--------------------------------------------------------------------------------
 \edef\myparskip{\the\parskip}
 \edef\myindent{\the\parindent}
 
-
-% **** change these if you need**** 
 \input{tex/p1.tex}
 \input{tex/p2.tex}
 \input{tex/p3.tex}
-% **** **** **** **** **** 
 
-% font size for the references
-\mainfont\fontsize{8.5pt}{8.5pt}\selectfont
-
+%--------------------------------------------------------------------------------
+% References
+%--------------------------------------------------------------------------------
+\reffont
 \bibliographystyle{unsrt}
-\bibliography{ref.bib}	
+\bibliography{ref.bib}
 
 \end{document}

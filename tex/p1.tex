@@ -9,33 +9,35 @@
 \setlength{\parindent}{\myindent}
 \setlength{\parskip}{\myparskip}
 
- \vspace*{-10pt}
+ \vspace*{-20pt}
 
 \section{Please read!}
 
-This is the format I created for my faculty job applications in the 2023-24 cycle.  You can view my research statement at \href{https://www.fmyang.com/files/statements/Fumeng_Yang-RS_2023.pdf}{\textit{this link}}. Several people asked me for this template. 
-I'm happy to share it although I think this template is a little hard to use. :-) It is the best if you need lots of figures.
-The main file is \verb|template-RS.tex|, and most of the formatting stuff are in \verb|format.tex|.  
+This is the format I created for my faculty job applications in the 2023--24 cycle. You can view my research statement at \href{https://www.fmyang.com/files/statements/Fumeng_Yang-RS_2023.pdf}{\textit{this link}}. Several people asked me for this template. 
+I'm happy to share it, although I think this template is a little hard to use. :-) It works best if you need lots of figures.
+The main file is \verb|template-RS.tex|, and most of the formatting is in \verb|researchstatement.cls|.  
 
 \subsection{Basics}
-You need to use XeLaTeX to compile this document. On overleaf, menu $\rightarrow$ compiler. \\
+You need to use XeLaTeX to compile this document. On Overleaf, Menu $\rightarrow$ Compiler. \\
 You should change the name (First Last) in the \verb|template-RS.tex| file. \\
 The colors are specified in the \verb|researchstatement.cls| file, around line 92. The convention is to match your home school color. \\
-The figure on the right is specified using  \verb|minipage|. The pain is that you have to end the text at the same position as the figure. If the text is too long, the text column will run over and the whole page will be pushed to the next page. So you have to end the text at the right point, or put the extra part into the next page manually. Sometimes \verb|\vspace| gives you a bit of extra room. Sorry, I don't know how to make this more flexible. You may need to use lots of \verb|\vspace|. P.S. using \verb|wrapfigure| will be more painful. \\
-This line is an example of using paragraph and bibtex. Reference example \cite{examplepaper}.
+The figure on the right is specified using \verb|minipage|. The drawback is that you have to end the text at the same position as the figure. If the text is too long, the text column will overflow and the whole page will be pushed to the next page. So you have to end the text at the right point, or move the extra part to the next page manually. Sometimes \verb|\vspace| gives you a bit of extra room. Sorry, I don't know how to make this more flexible. You may need to use lots of \verb|\vspace|. P.S. using \verb|wrapfigure| will be more painful. \\
+This line is an example of using paragraph and BibTeX. Reference example \cite{examplepaper}.
 
-\textbf{2024/12/23 update}: This template is unexpectedly getting a bit of attention. I made the \verb|format.tex| into a \verb|.cls| file and also fixed the figure caption font problems. 
+\textbf{2024/12/23 update}: This template is unexpectedly getting a bit of attention. I converted \verb|format.tex| into a \verb|.cls| file and also fixed the figure caption font problems. 
+
+\textbf{2026/01/09 update}: Getting a bit bored in Key Largo. I made minor changes to ``Please read!'' and font size,  and used Cursor to standardize the \verb|.cls| file. 
 
 \subsection{Advanced}
-\paragraph{Font} The fonts I used for my applications are slightly different.  I changed them because one of them is a commercial font, and because I want to preserve a bit of uniqueness :-). I chose different fonts but I also these fonts are decent. You can change them by loading different ttf files in the \verb|format.tex| file.
-I suggest to use a font which matches your CV. So  if you use a serif font in your CV, you should at least use a serif font here. I chose to use the identical fonts. This is because your materials will be reviewed together. 
+\paragraph{Font} The fonts I used for my applications are slightly different. I changed them because one of them is a commercial font, and because I want to preserve a bit of uniqueness :-). I chose different fonts, but I also think these fonts are decent. You can change them by loading different TTF files in the \verb|researchstatement.cls| file.
+I suggest using a font that matches your CV. So if you use a serif font in your CV, you should at least use a serif font here. I chose to use the identical fonts\textemdash{}Your materials will be reviewed together. 
 
-\paragraph{Spacing and Size} You can change line space  (\verb|\linespread|, about line 185), section title size, page margin, paragraph spacing (\verb|\parskip|) etc in the \verb|format.tex| file.
-You can change font size in the main file. 
+\paragraph{Spacing and Size} You can change line spacing (\verb|\linespread|, around line 185), section title size, page margin, paragraph spacing (\verb|\parskip|) etc. in the \verb|researchstatement.cls| file.
+You can change the font size in the main file. 
 
 \section{Current research}
 
-\lipsum[1]
+\lipsum[3]
 
 %\lipsum[5]
 Note: Here it has to be a short paragraph ending on this page unless you don't want the side image. Here it has to be a short paragraph ending on this page unless you don't want the side image. 
